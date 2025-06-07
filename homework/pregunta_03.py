@@ -16,8 +16,8 @@ def pregunta_03():
 
     """
     sums = {}
-    for i, letter in enumerate(get_column("files\input\data.csv", 0)):
-        value = int(get_column("files\input\data.csv", 1)[i])
+    for i, letter in enumerate(get_column("files/input/data.csv", 0)):
+        value = int(get_column("files/input/data.csv", 1)[i])
         sums[letter] = sums.get(letter, 0) + value
     return sorted(sums.items())
 

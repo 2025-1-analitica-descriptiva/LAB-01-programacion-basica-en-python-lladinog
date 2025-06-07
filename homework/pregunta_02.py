@@ -16,6 +16,6 @@ def pregunta_02():
 
     """
     counts = {}
-    for letter in get_column("files\input\data.csv", 0):
+    for letter in get_column("files/input/data.csv", 0):
         counts[letter] = counts.get(letter, 0) + 1
     return sorted(counts.items())

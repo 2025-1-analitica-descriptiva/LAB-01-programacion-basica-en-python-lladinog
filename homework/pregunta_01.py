@@ -14,4 +14,4 @@ def pregunta_01():
     214
 
     """
-    return sum(int(value) for value in get_column("files\input\data.csv", 1))
+    return sum(int(value) for value in get_column("files/input/data.csv", 1))

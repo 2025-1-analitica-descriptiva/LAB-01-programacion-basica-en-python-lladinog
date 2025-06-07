@@ -27,7 +27,7 @@ def pregunta_04():
 
     """
     counts = {}
-    for date in get_column("files\input\data.csv", 2):
+    for date in get_column("files/input/data.csv", 2):
         month = date.split("-")[1]
         counts[month] = counts.get(month, 0) + 1
     return sorted(counts.items())
