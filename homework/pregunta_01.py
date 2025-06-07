@@ -4,7 +4,7 @@ datos requeridos se encuentran en el archivo data.csv. En este laboratorio
 solo puede utilizar las funciones y librerias basicas de python. No puede
 utilizar pandas, numpy o scipy.
 """
-
+from homework.utils import get_column
 
 def pregunta_01():
     """
@@ -14,3 +14,4 @@ def pregunta_01():
     214
 
     """
+    return sum(int(value) for value in get_column("files\input\data.csv", 1))
