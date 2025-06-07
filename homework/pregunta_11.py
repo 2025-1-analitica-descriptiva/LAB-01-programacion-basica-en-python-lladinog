@@ -16,8 +16,8 @@ def pregunta_11():
 
 
     """
-    column2 = get_column("files\input\data.csv", 1)
-    column4 = get_column("files\input\data.csv", 3)
+    column2 = get_column("files/input/data.csv", 1)
+    column4 = get_column("files/input/data.csv", 3)
 
     result = {}
     for text, value in zip(column4, column2):
