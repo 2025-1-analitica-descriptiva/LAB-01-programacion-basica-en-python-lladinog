@@ -4,7 +4,7 @@ datos requeridos se encuentran en el archivo data.csv. En este laboratorio
 solo puede utilizar las funciones y librerias basicas de python. No puede
 utilizar pandas, numpy o scipy.
 """
-
+from homework.utils import get_column
 
 def pregunta_04():
     """
@@ -26,3 +26,8 @@ def pregunta_04():
      ('12', 3)]
 
     """
+    counts = {}
+    for date in get_column("files\input\data.csv", 2):
+        month = date.split("-")[1]
+        counts[month] = counts.get(month, 0) + 1
+    return sorted(counts.items())
