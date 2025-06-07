@@ -4,6 +4,7 @@ datos requeridos se encuentran en el archivo data.csv. En este laboratorio
 solo puede utilizar las funciones y librerias basicas de python. No puede
 utilizar pandas, numpy o scipy.
 """
+from homework.utils import get_column
 
 
 def pregunta_07():
@@ -25,3 +26,14 @@ def pregunta_07():
      (9, ['A', 'B', 'E', 'A', 'A', 'C'])]
 
     """
+    column1 = get_column("files/input/data.csv", 0)
+    column2 = get_column("files/input/data.csv", 1)
+
+    result = {}
+    for letter, value in zip(column1, column2):
+        value = int(value)
+        if value not in result:
+            result[value] = []
+        result[value].append(letter)
+
+    return [(k, v) for k, v in sorted(result.items())]

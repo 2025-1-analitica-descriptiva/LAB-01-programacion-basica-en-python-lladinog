@@ -25,3 +25,24 @@ def get_column(file_path, column):
             value = row[column].strip()
             values.append(value)
     return values
+
+def get_dictionary_column5():
+    """
+    Returns a dictionary where each key is a unique identifier from the fifth column
+    of the CSV file, and each value is a list of integers representing the counts
+    associated with that identifier.
+    """
+    column = get_column("files/input/data.csv", 4)
+    dict = {}
+
+    for entry in column:
+        pairs = entry.split(",")
+        for pair in pairs:
+            key, value = pair.split(":")
+            value = int(value)
+            if key not in dict:
+                dict[key] = [value]
+            else:
+                dict[key].append(value)
+
+    return dict

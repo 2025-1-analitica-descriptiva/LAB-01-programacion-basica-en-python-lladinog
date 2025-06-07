@@ -4,7 +4,7 @@ datos requeridos se encuentran en el archivo data.csv. En este laboratorio
 solo puede utilizar las funciones y librerias basicas de python. No puede
 utilizar pandas, numpy o scipy.
 """
-
+from homework.utils import get_dictionary_column5
 
 def pregunta_09():
     """
@@ -24,3 +24,10 @@ def pregunta_09():
      'jjj': 18}}
 
     """
+    dictionary_column = get_dictionary_column5()
+    result = {}
+
+    for key, values in dictionary_column.items():
+        result[key] = len(values)
+
+    return result
